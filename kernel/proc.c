@@ -291,6 +291,8 @@ fork(void)
 
   safestrcpy(np->name, p->name, sizeof(p->name));
 
+  np->tracemask = p->tracemask;
+
   pid = np->pid;
 
   np->state = RUNNABLE;
